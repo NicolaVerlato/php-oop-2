@@ -18,7 +18,6 @@ $marco->addNewProduct($brush);
 $marco->addNewProduct($house);
 
 $marco->calcFullPrice();
-$marco->makePayment();
 
 try{
     $res = $marco->makePayment();
@@ -27,7 +26,6 @@ try{
     } 
 } catch(Exception $e) {
     error_log($e->getMessage());
-    echo $e->getMessage();
-    // echo "La transazione non è andata a buon fine, ti preghiamo di riprovare";
+    echo "La transazione non è andata a buon fine, ti preghiamo di riprovare";
 }
 ?>
