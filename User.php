@@ -5,7 +5,7 @@ class User{
     public $email;
     public $discount = 0;
     public $balance = 0;
-    public $selectedProducts = [];
+    protected $selectedProducts = [];
 
     public function __construct($_name, $_email){
         $this->name = $_name;

@@ -1,6 +1,10 @@
 <?php
 
+require_once __DIR__ . '/Brand.php';
+
 class GenericProduct{
+    use Brand;
+
     public $name;
     public $quantity;
     public $price = 0;

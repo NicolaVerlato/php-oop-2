@@ -14,12 +14,12 @@ $house = new Doghouse('Dog House', 80, 1);
 $house->materials = 'plastic';
 $house->size = 200;
 
-
 $marco->addNewProduct($brush);
 $marco->addNewProduct($house);
 
 $marco->calcFullPrice();
 $marco->makePayment();
+var_dump($marco->getProdottiScelti());
 
 if($marco->makePayment() === 'buon fine'){
     echo "Grazie per aver effettuato l'ordine";
