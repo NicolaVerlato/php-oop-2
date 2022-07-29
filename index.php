@@ -19,10 +19,15 @@ $marco->addNewProduct($house);
 
 $marco->calcFullPrice();
 $marco->makePayment();
-var_dump($marco->getProdottiScelti());
 
-if($marco->makePayment() === 'buon fine'){
-    echo "Grazie per aver effettuato l'ordine";
+try{
+    $res = $marco->makePayment();
+    if($res === 'buon fine'){
+        echo "Grazie per aver effettuato l'ordine";
+    } 
+} catch(Exception $e) {
+    error_log($e->getMessage());
+    echo $e->getMessage();
+    // echo "La transazione non è andata a buon fine, ti preghiamo di riprovare";
 }
-
 ?>

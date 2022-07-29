@@ -5,6 +5,6 @@ class LogUser extends User{
     // override
     public $discount = 20;
     // override
-    public $balance = 200;
+    public $balance = 70;
 }
 ?>

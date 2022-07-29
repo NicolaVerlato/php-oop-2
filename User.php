@@ -33,8 +33,9 @@ class User{
 
     public function makePayment(){
         if($this->balance < $this->calcFullPrice()) {
-            die('Pagamento non riuscito');
-        }else{
+            throw new Exception('Pagamento non riuscito');
+            // die("Pagamento non riuscito");
+        } else {
             return 'buon fine';
         }
     }
